@@ -1,0 +1,225 @@
+/* =========================
+   Color Palette (copy/paste)
+   Palette: "Calm Navy + Sand"
+   Primary (Navy):     #0B1F3B
+   Secondary (Teal):   #1F6F78
+   Accent (Gold):      #F4C95D
+   Light (Sand):       #F7F3E8
+   Card (White):       #FFFFFF
+   Text (Dark):        #102A43
+   Muted Text:         #486581
+   ========================= */
+
+/* 5) Box model fix (GLOBAL) */
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Default font family */
+body {
+    font-family: "Source Sans 3", Arial, sans-serif;
+    background: #F7F3E8;
+    color: #102A43;
+    line-height: 1.6;
+    margin: 0;
+    /* 3d) remove default white border around page */
+}
+
+/* Headings font */
+h1,
+h2,
+h3 {
+    font-family: "Poppins", Arial, sans-serif;
+}
+
+/* Make h1 and h2 stand out */
+h1 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1.15;
+}
+
+h2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    margin-top: 0;
+    /* 3c) remove top margin so padding looks consistent */
+}
+
+h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+/* 1b + 2d + 3a + 4f) Reusable content wrapper */
+.content-wrap {
+    max-width: 950px;
+    /* 2d) flexible width */
+    margin: 0 auto;
+    /* center */
+    padding: 50px;
+    /* 3a) consistent padding across sections */
+    overflow: hidden;
+    /* 4f) contain floats */
+}
+
+/* Section backgrounds */
+.site-header {
+    background: #0B1F3B;
+    color: #FFFFFF;
+}
+
+.section-work {
+    background: #E9F5F6;
+}
+
+.section-education {
+    background: #FFF6DF;
+}
+
+.site-footer {
+    background: #1F6F78;
+    color: #FFFFFF;
+}
+
+/* 4d) tighten header heading spacing */
+header h1,
+header h2 {
+    margin: 0;
+}
+
+/* Header tagline color */
+header h2 {
+    color: #F4C95D;
+    font-weight: 600;
+}
+
+/* Header paragraph color */
+.site-header p {
+    max-width: 100ch;
+    margin-top: 1rem;
+    color: rgba(255, 255, 255, 0.92);
+}
+
+/* 4a + 4b + 4c) Profile image styles */
+.profile-img {
+    width: 200px;
+    border-radius: 25%;
+    margin-right: 50px;
+    /* 4g) space between image and text */
+}
+
+/* 6d) Column styles (reusable) */
+.column-narrow {
+    width: 30%;
+    float: left;
+    padding-right: 3%;
+    min-height: 175px;
+}
+
+.column-wide {
+    width: 70%;
+    float: left;
+    min-height: 225px;
+}
+
+/* Section spacing helpers */
+.section {
+    /* background is on the section, padding is on content-wrap */
+}
+
+/* Cards inside sections */
+.card {
+    background: #FFFFFF;
+    border-radius: 14px;
+    padding: 1.25rem 1.1rem;
+    box-shadow: 0 6px 18px rgba(16, 42, 67, 0.08);
+    margin-top: 1rem;
+    overflow: hidden;
+    /* keep floated columns inside each card */
+}
+
+.meta {
+    color: #486581;
+    font-size: 0.98rem;
+}
+
+/* Optional list styling */
+.list-title {
+    margin-top: 0.85rem;
+    font-weight: 600;
+}
+
+ul {
+    margin-top: 0.5rem;
+    padding-left: 1.25rem;
+}
+
+li {
+    margin: 0.35rem 0;
+}
+
+/* Links */
+a {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+a:hover {
+    opacity: 0.85;
+}
+
+/* 3e) Footer align */
+footer {
+    text-align: center;
+}
+
+/* 3g) Footer link spacing only inside footer contact area */
+.contact-info a {
+    padding: 10px;
+    display: inline-block;
+}
+
+.copyright {
+    opacity: 0.9;
+    font-size: 0.95rem;
+    margin-top: 0.75rem;
+}
+
+/* Mobile responsiveness (floats stack) */
+@media (max-width: 900px) {
+
+    .column-narrow,
+    .column-wide {
+        width: 100%;
+        float: none;
+        min-height: auto;
+        padding-right: 0;
+    }
+
+    .profile-img {
+        width: 220px;
+        margin-right: 0;
+        margin-bottom: 20px;
+        display: block;
+    }
+
+    header {
+        text-align: center;
+    }
+}
